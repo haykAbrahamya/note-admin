@@ -13,6 +13,7 @@ import {
 import { PapersPage } from 'pages/papers';
 import { CoversPage } from 'pages/covers';
 import { TemplatesPage } from 'pages/templates';
+import { OrdersPage } from 'pages/orders';
 
 export const Routes = () => {
 	const [token] = useContext(AuthContext);
@@ -43,6 +44,11 @@ export const Routes = () => {
 				index
 				path='/covers'
 				element={<CoversPage />}
+			/>
+			<Route
+				index
+				path='/orders'
+				element={<OrdersPage />}
 			/>
 			<Route path='*' element={<Navigate to='/covers' />} />
 		</CoreRoutes>

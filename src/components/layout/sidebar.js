@@ -30,6 +30,11 @@ export const Sidebar = () => {
 				path: '/templates',
 				title: 'Ձևանմուշներ',
 			},
+			{
+				id: 4,
+				path: '/orders',
+				title: 'Պատվերներ',
+			},
 		];
 	}, []);
 
