@@ -192,7 +192,7 @@ export const OrderForm = ({
 				className='form-container'
 				onClick={e => e.stopPropagation()}
 			>
-				<div className='form-header'>{formType} պատվեր</div>
+				<div className='form-header'>Պատվեր</div>
 				<div className='form-content'>
 					<div className='form-part'>
 						<span>Կազմի նկարագրություն</span>
