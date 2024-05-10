@@ -66,7 +66,6 @@ export const OrderForm = ({
 	editableData,
 	handleSubmit,
 }) => {
-	console.log(editableData, 'sdffd');
 	const [formData, setFormData] = useState(
 		editableData || initialValues
 	);
@@ -83,7 +82,7 @@ export const OrderForm = ({
 			const cover = lists.covers.find(
 				item => item._id === formData.cover.id
 			);
-			console.log(cover, 'cover');
+
 			formData.templates.forEach(template => {
 				const paper = lists.papers.find(
 					item => item._id === template.paperId
@@ -149,7 +148,6 @@ export const OrderForm = ({
 	useEffect(() => {
 		loadLists();
 	}, []);
-	console.log(lists, 'lists');
 
 	const onSubmit = () => {
 		handleSubmit({ ...formData, price });
@@ -185,9 +183,12 @@ export const OrderForm = ({
 			item.height * 1000
 		}, ${item.price}֏)`,
 	}));
-	console.log(formData, 'sdj');
+
 	return (
-		<div className='modal-form-wrapper' onClick={onClose}>
+		<div
+			className='order-modal-form-wrapper'
+			onClick={onClose}
+		>
 			<div
 				className='form-container'
 				onClick={e => e.stopPropagation()}
