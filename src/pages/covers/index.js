@@ -135,7 +135,7 @@ export const CoversPage = () => {
 									/>
 								</div>
 								<div className='info-row'>
-									<span>Տիպ</span>
+									<span>Տեսակ</span>
 									<span>{cover.type}</span>
 								</div>
 								<div className='info-row'>

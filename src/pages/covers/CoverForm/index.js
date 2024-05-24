@@ -60,7 +60,7 @@ export const CoverForm = ({
 			>
 				<div className='form-header'>{formType} Կազմ</div>
 				<Input
-					placeholder='Չափս'
+					placeholder='Տեսակ'
 					value={formData.type}
 					errorMessage={errors.type}
 					name='type'

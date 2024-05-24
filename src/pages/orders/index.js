@@ -52,7 +52,7 @@ export const OrdersPage = () => {
 				toast.success('Պատվերը հաստատվեց');
 				setOrdersList(
 					ordersList.map(order => {
-						if (order.id === orderId) return order;
+						if (order._id !== orderId) return order;
 
 						return {
 							...order,
@@ -74,7 +74,7 @@ export const OrdersPage = () => {
 				toast.success('Պատվերը մերժվեց');
 				setOrdersList(
 					ordersList.map(order => {
-						if (order.id === orderId) return order;
+						if (order._id !== orderId) return order;
 
 						return {
 							...order,
@@ -153,6 +153,10 @@ export const OrdersPage = () => {
 									) : (
 										orderStatuses[order.status]
 									)}
+								</div>
+								<div className='info-row'>
+									<span>Քանակ</span>
+									<span>{order.orderCount}</span>
 								</div>
 								<div className='info-row'>
 									<span>Գին</span>

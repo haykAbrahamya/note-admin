@@ -196,6 +196,17 @@ export const OrderForm = ({
 				<div className='form-header'>Պատվեր</div>
 				<div className='form-content'>
 					<div className='form-part'>
+						<span>Բլոկնոտ</span>
+						<div className='form-part-fields'>
+							<Input
+								type='number'
+								value={formData.orderCount}
+								placeholder='Քանակ'
+								disabled={viewMode}
+							/>
+						</div>
+					</div>
+					<div className='form-part'>
 						<span>Կազմի նկարագրություն</span>
 						<div className='form-part-fields'>
 							<Select
